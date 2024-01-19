@@ -3,9 +3,9 @@ const ApiUrl = "https://api.weatherapi.com/v1/current.json";
 
 /**
  *  Fetches data from the API
- * @param {location} location location from input value to fetch data from
+ * @param {string} location location from input value to fetch data from
  */
-async function fetchData(location) {
+async function fetchDataForInputvalue(location) {
   const url = `${ApiUrl}?key=${ApiKey}&q=${location}`; // Add the "q" parameter with your desired location
   fetch(url)
     .then((response) => response.json())
