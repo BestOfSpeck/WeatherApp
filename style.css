@@ -8,6 +8,7 @@ header {
     text-align: center;
     font-size: 35px;
     color: white;
+    border-bottom: 2px solid yellowgreen;
 }
 
 .search-input {
@@ -22,4 +23,9 @@ header {
    height: 25px;
    border-radius: 8px;
    border: none;
+}
+
+.render-container {
+    background-color: #6b6b6b;
+    height: calc(100vh - 255.78px);
 }

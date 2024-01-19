@@ -3,18 +3,18 @@ const ApiUrl = "https://api.weatherapi.com/v1/current.json";
 
 /**
  *  Fetches data from the API
- * @param {string} location location from input value to fetch data from
+ * @param {string} location location from inputvalue to fetch data from
+ * @returns {JSON} Promise object represents the fetched data
  */
 async function fetchDataForInputvalue(location) {
-  const url = `${ApiUrl}?key=${ApiKey}&q=${location}`; // Add the "q" parameter with your desired location
+  const url = `${ApiUrl}?key=${ApiKey}&q=${location}`;
   fetch(url)
     .then((response) => response.json())
     .then((data) => {
-      // Process the data here
       console.log(data);
     })
     .catch((error) => {
-      // Handle any errors here
       console.error(error);
+      return
     });
 }
