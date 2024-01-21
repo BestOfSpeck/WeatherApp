@@ -4,17 +4,22 @@ const ApiUrl = "https://api.weatherapi.com/v1/current.json";
 /**
  *  Fetches data from the API
  * @param {string} location location from inputvalue to fetch data from
- * @returns {JSON} Promise object represents the fetched data
+ * @returns {Promise} Promise object represents the fetched data
  */
 async function fetchDataForInputvalue(location) {
   const url = `${ApiUrl}?key=${ApiKey}&q=${location}`;
-  fetch(url)
-    .then((response) => response.json())
-    .then((data) => {
-      console.log(data);
-    })
-    .catch((error) => {
-      console.error(error);
-      return
-    });
+  try {
+    const response = await fetch(url);
+    const data = await response.json();
+    
+    if (data.error) {
+      console.error("Fehler beim Abrufen der Wetterdaten:", data.error.message);
+    } else {
+      weatherData.push(data);
+      console.log(weatherData);
+    }
+  } catch (error) {
+    console.error(error);
+  }
 }
+

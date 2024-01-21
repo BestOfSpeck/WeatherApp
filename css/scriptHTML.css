@@ -1,0 +1,33 @@
+.card-body {
+  background-color: ;
+  padding: 48px;
+}
+
+.card-title {
+  font-size: 36px;
+}
+
+.card-img-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  border-radius: 50px;
+  border: 2px solid yellowgreen;
+  background-color: #333;
+}
+
+.card-text {
+  font-size: 48px;
+  font-weight: bold;
+  margin-bottom: 0;
+}
+
+.card-text-feelslike {
+  font-size: 18px;
+}
+
+.card {
+    background-color: #888;
+  border-radius: 50px;
+}
