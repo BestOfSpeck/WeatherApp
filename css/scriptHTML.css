@@ -1,5 +1,4 @@
 .card-body {
-  background-color: ;
   padding: 48px;
 }
 
@@ -28,6 +27,6 @@
 }
 
 .card {
-    background-color: #888;
+  background-color: #888;
   border-radius: 50px;
 }

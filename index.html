@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="css/scriptHTML.css" />
     <title>Weather</title>
   </head>
-  <body>
+  <body onload="init()">
     <header>
       <div class="header-text-container">
         <h1 class="roboto-regular">Weather</h1>
@@ -26,13 +26,21 @@
           id="search"
           placeholder="Search your city"
         />
-        <button class="roboto-regular" id="searchBtn" onclick="searchWeatherByInput()">Search</button>
+        <button
+          class="roboto-regular"
+          id="searchBtn"
+          onclick="searchWeatherByInput()"
+        >
+          Search
+        </button>
       </div>
     </header>
 
     <div class="render-container" id="render_container"></div>
 
-    <script src="storage.js"></script>
-    <script src="script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/geolocation-polyfill/0.7.3/geolocation-polyfill.min.js"></script>
+    <script src="js/storage.js"></script>
+    <script src="js/scriptHTML.js"></script>
+    <script src="js/script.js"></script>
   </body>
 </html>
